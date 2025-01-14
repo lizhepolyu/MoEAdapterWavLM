@@ -12,8 +12,6 @@ $$
 
 where $\sigma(\cdot)$ denotes the ReLU function, $W_1$ and $W_2$ are learnable weight matrices, and $b_1$ and $b_2$ are bias terms. The residual connection $h + (\cdot)$ ensures stable training and effective gradient flow. The dimension of the hidden layer inside the adapter is set to 256, while the main model parameters remain frozen during fine-tuning.
 
-![Adapter Architecture](placeholder_for_image)
-
 ---
 
 ## Mixture-of-Experts (MoE)
@@ -47,4 +45,4 @@ $$
 
 Here, each expert $\mathrm{Adapter}_k(\cdot)$ internally follows the same two-layer feed-forward design (with possibly different parameters) as in Equations (1)--(2), but they are *separately* learned. The final output $h^{\prime}$ incorporates the specialized transformations from all experts, weighted by the data-dependent gating mechanism.
 
-![Mixture-of-Experts Architecture](placeholder_for_image)
+![Mixture-of-Experts Architecture](assets/MoEAdapter.png)
