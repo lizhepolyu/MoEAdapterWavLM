@@ -45,4 +45,6 @@ $$
 
 Here, each expert $\mathrm{Adapter}_k(\cdot)$ internally follows the same two-layer feed-forward design (with possibly different parameters) as in Equations (1)--(2), but they are *separately* learned. The final output $h^{\prime}$ incorporates the specialized transformations from all experts, weighted by the data-dependent gating mechanism.
 
-![Mixture-of-Experts Architecture](assets/MOEAdapter.png)
+<div align="center">
+  <img src="assets/MOEAdapter.png" alt="Illustration" width="70%">
+</div>
